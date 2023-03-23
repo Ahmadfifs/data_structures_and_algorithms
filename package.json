@@ -1,0 +1,14 @@
+{
+  "name": "data-structures-and-alogrithms",
+  "version": "1.0.0",
+  "description": "implement data structres using typeScript.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Ahmad Alfaify",
+  "license": "ISC",
+  "devDependencies": {
+    "typescript": "^5.0.2"
+  }
+}

@@ -1,4 +1,4 @@
-# data_structures_and_algorithms
+# Data Structures And Algorithms
 Implement data structure and algorithm using typescript.
 
 

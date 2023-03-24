@@ -1,5 +1,5 @@
 import { test, expect } from "@jest/globals";
-import linserSearch from "./src/LinearSearch";
+import linserSearch from "../src/LinearSearch";
 
 test('Should pass', () => { 
 	expect(linserSearch([1,2,3,4,1,2,3], 2)).toBe(true);

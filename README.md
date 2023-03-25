@@ -9,5 +9,5 @@ npm install
 
 you can edit any algorithm and run test by using jest
 ```
-npm test ./test/{algorithmName}.ts
+npm test {algorithmName}.test.ts
 ```

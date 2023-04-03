@@ -1,6 +1,4 @@
-import Queue from "./Queue";
-
-class TNode<T> {
+export class TNode<T> {
 	value: T;
 	left?: TNode<T>;
 	right?: TNode<T>;
@@ -13,8 +11,8 @@ class TNode<T> {
 
 export default class BinaryTree<T> {
 
-	private root?: TNode<T>;
-	private length: number;
+	root?: TNode<T>;
+	length: number;
 
 	constructor(){
 		this.length = 0;
@@ -115,6 +113,11 @@ export default class BinaryTree<T> {
 		}
 
 		return values;
+	}
+
+
+	getRoot() {
+		return this.root;
 	}
 
 

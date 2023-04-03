@@ -20,11 +20,16 @@ export default class Queue<T> {
 		this.length++;
 		const node = { value } as QNode<T>;
 		if(!this.tail){
-			this.tail = this.head = node;
+			this.tail = node;
+			this.head = node;
 			return;
 		}
 
-		node.next = this.tail;
+		if(this.head == this.tail){
+			this.head.next = node;
+		}
+
+		this.tail.next = node;
 		this.tail = node;
 	}
 	
@@ -36,9 +41,9 @@ export default class Queue<T> {
 		}
 
 		this.length--;
-		const head = this.head;
+		const value = this.head.value;
 		this.head = this.head.next;
-		return head.value;
+		return value;
 	}
 
 
@@ -48,6 +53,18 @@ export default class Queue<T> {
 
 	tailValue(): T | undefined {
 		return this.tail?.value;
+	}
+
+
+	traverse(): T[] {
+		const arr: T[] = [];
+
+		while(this.head){
+			arr.push(this.head.value);
+			this.head = this.head.next;
+		}
+
+		return arr;
 	}
 	
 

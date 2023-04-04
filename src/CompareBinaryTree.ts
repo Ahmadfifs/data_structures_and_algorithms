@@ -26,24 +26,3 @@ export default function compareBinaryTree(node1: TNode<number>, node2: TNode<num
 
 	return compareBinaryTree(node1.left as TNode<number> , node2.left as TNode<number>) && compareBinaryTree(node1.right as TNode<number> , node2.right as TNode<number>);
 }
-
-
-const tree = new BinaryTree<number>();
-const tree2 = new BinaryTree<number>();
-
-
-tree.add(3);
-tree.add(2);
-tree.add(1);
-tree.add(5);
-tree.add(4);
-
-
-tree2.add(3);
-tree2.add(2);
-tree2.add(11);
-tree2.add(5);
-tree2.add(4);
-
-console.log(compareBinaryTree(tree.root as TNode<number>, tree2.root as TNode<number>))
-

@@ -152,14 +152,15 @@ export default class BinaryTree<T> {
 
 		
 		// push node value and recuese 
-		values.push(node.value); //* in order
+		values.push(node.value); //* pre order 
 
 		this.traverseRecursion(node.left as TNode<T>, values);
 
-		// values.push(node.value); //* post order the result will be order array
+		// values.push(node.value); //* in order
 
 		this.traverseRecursion(node.right as TNode<T>, values);
 
+		// values.push(node.value); //* post order
 		return values;
 		
 	}
